@@ -1,11 +1,11 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LandingScreen from "./screens/LandingScreen";
 import LoginScreen from "./screens/LoginScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import SensorScreen from "./screens/SensorScreen";
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import DashboardScreen from "./screens/DashboardScreen";
 import AboutScreen from "./screens/AboutScreen";
 import LecturaAmbienteScreen from "./screens/LecturaAmbienteScreen";
@@ -23,15 +23,8 @@ export default function App() {
           <Stack.Screen name="Register" component={RegisterScreen} />
           <Stack.Screen name="Sensor" component={SensorScreen} />
           <Stack.Screen name="Dashboard" component={DashboardScreen} />
-          <Stack.Screen
-            name="DashboardDatos"
-            component={DashboardDatosScreen}
-          />
-          <Stack.Screen
-            name="LecturaAmbiente"
-            component={LecturaAmbienteScreen}
-            options={{ title: "Lectura del Ambiente" }}
-          />
+          <Stack.Screen name="DashboardDatos" component={DashboardDatosScreen} />
+          <Stack.Screen name="LecturaAmbiente" component={LecturaAmbienteScreen}  />
           <Stack.Screen name="About" component={AboutScreen} />
         </Stack.Navigator>
       </NavigationContainer>
@@ -39,22 +32,16 @@ export default function App() {
   );
 }
 
-
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#0202edff',
+    backgroundColor: "#0202edff",
     paddingTop: 40,
-    paddingBottom: 40
+    paddingBottom: 40,
   },
-/*   content: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  }, */
   title: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 22,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });
